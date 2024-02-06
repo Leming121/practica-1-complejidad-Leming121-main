@@ -25,7 +25,15 @@ public class Complejidad implements IComplejidad {
     }
     
     public int fibonacciRec(int n){
-        return 0;
+        if (n < 2){
+            throw new IndexOutOfBoundsException("Encontrado el error");
+        }
+        else if (n>2) { 
+            return fibonacciRec(n - 1) + fibonacciRec(n - 2);
+        }
+        else {
+            return n;
+        }
     }
 
     public int fibonacciIt(int n){
@@ -61,7 +69,7 @@ public class Complejidad implements IComplejidad {
 
 /*
  * Código para triángulo de pascal.
- */
+ 
     public class TrianguloPascal {    
         public static void main(String[] args) {        
             Scanner input=new Scanner(System.in);
@@ -78,4 +86,5 @@ public class Complejidad implements IComplejidad {
             }
         }    
     }
+*/
 }
